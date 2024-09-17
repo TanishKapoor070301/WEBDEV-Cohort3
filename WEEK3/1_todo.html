@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+    <input type="text">
+    <button onclick="addTodo()">addtodo</button>
+
+    </div>
+    
+</body>
+
+<script>
+
+    let counter=1;
+
+
+    function deleteTodo(counter){
+
+        console.log("ji")
+        let todo=document.getElementById(counter);
+        console.log(counter)
+        console.log(todo)
+        todo.parentNode.removeChild(todo)
+    }
+
+    function addTodo(){
+        let todoval=document.querySelector("input").value;
+        let newtodo=document.createElement("div");
+        newtodo.setAttribute("id",counter);
+        // counter=counter
+        newtodo.innerHTML="<div>"+todoval+"</div>"+"<button onClick='deleteTodo(" + counter + ")'>delete</button>";
+        document.querySelector("body").appendChild(newtodo)
+        counter = counter + 1;
+
+
+
+
+
+    }
+
+</script>
+</html> 
+
